@@ -122,11 +122,11 @@ main button{
 	margin: 5px;
 	font-weight: 700;
 	border: none;
+	color:black;
 	background: white;
 }
 main button:hover{
 	background: darkgrey;
-	color: white;
 	border: none;
 	transition: 0.3s linear;
 	border-radius: 5px;
