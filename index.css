@@ -1,0 +1,488 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+#hero{
+	background:linear-gradient(to top, rgba(0,0,0,0.9)25%,rgba(0,0,0,0.9)25%), url(b.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+	display: grid;
+	min-height: 100dvh;
+	grid-template-columns: 150px auto;
+	grid-template-rows: 1fr auto 1fr;
+	grid-template-areas: 
+	"nav nav"
+	"aside main";
+}
+nav{
+	grid-area: nav;
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	gap: 20px;
+	color: white;
+}
+nav span{
+	color: goldenrod;
+}
+nav ul{
+	list-style: none;
+	display: flex;
+	text-align: center;
+	font-weight: 900;
+	cursor: pointer;
+	gap: 20px;
+}
+nav ul li{
+	color: white;
+}
+nav a{
+	color: white;
+	text-decoration: none;
+}
+nav ul li:hover{
+	color: goldenrod;
+}
+#close-btn{
+	display: none;
+}
+#btn{
+	cursor: pointer;
+	display: none;
+}
+aside{
+	grid-area: aside;
+	padding: 20px 20px;
+	align-content: center;
+	display: block;
+}
+aside h1{
+	padding: 5px;
+	border-bottom: 1px solid grey;
+	color: white;
+}
+aside ul{
+	list-style: none;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 700;
+}
+aside ul li{
+	border-bottom: 1px solid grey;
+	color: white;
+	margin: 10px;
+	padding: 5px;
+}
+aside ul li:hover{
+	background: hsla(43, 74%, 49%, 0.61);
+	color: white;
+}
+main{
+	grid-area: main;
+	padding:100px 50px;
+	border-left: 1px solid gray;
+	position: relative;
+}
+main h1{
+	color: white;
+	font-size: 50px;
+	animation:fade 1s linear 0s 1;
+}
+@keyframes fade {
+	from{
+		opacity: 0;
+		scale: .8;
+	}
+	to{
+		opacity: 1;
+		scale: 1;
+	}
+}
+main h3{
+	font-size: 30px;
+	color:goldenrod ;
+	animation:fade 2s linear 0s 1;
+
+}
+main p{
+	font-size: 20px;
+	margin-bottom:10px ;
+	color: white;
+	animation:fade 3s linear 0s 1;
+}
+main button{
+	padding: 10px 20px;
+	cursor: pointer;
+	margin: 5px;
+	font-weight: 700;
+	border: none;
+	background: white;
+}
+main button:hover{
+	background: darkgrey;
+	color: white;
+	border: none;
+	transition: 0.3s linear;
+	border-radius: 5px;
+}
+main #me{
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	z-index: 1;
+	animation: float 10s linear 0s infinite;
+}
+@keyframes float {
+	0%{
+		opacity: 0.8;
+		scale: .5;
+	}
+	100%{
+		opacity: 1;
+		scale: .8;
+	}
+}
+#about{
+	text-align: center;
+	min-height: 100vh;
+	background: hsl(0, 0%, 2%);	
+}
+.project-card-container{
+	display:grid;
+	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+	gap: 20px;
+}
+.cards{
+	background: hsla(0, 3%, 13%, 0.384);
+	border-radius: 10px;
+	color: goldenrod;
+	box-shadow: 5px 5px 10px black;
+	padding: 10px;
+	animation: run 1s ease-in-out 0s 1;
+	animation-timeline: view(90% 10%);
+	animation-range:cover ;
+}
+.cards img{
+	width: 100%;
+	height: auto;
+}
+/*.cards img:hover{
+	animation: flip 2s linear 0s 1
+
+}*/
+@keyframes flip {
+	100%{
+		transform: rotateY(350deg);
+		border-radius: 50%;
+	}
+	0%{
+		transform: rotateY(0deg);
+		border-radius: 20px;
+	}
+	
+}
+.cards:hover img{
+	padding: 5px;
+	transition: 0.3s ease-in-out;
+}
+@keyframes run {
+	0%{
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+#pop-up{
+	background: rgba(0, 0, 0, 0.733);
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	text-align: center;
+	align-content: center;
+	padding: 50px;
+}
+#pop-up #close-pop{
+	display: block;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	font-size: 30px;
+	cursor: pointer;
+	color: black;
+}
+#pop-up #close-pop:hover{
+	color: goldenrod;
+}
+.pop-up-container{
+	background: rgba(255, 255, 255, 0.808);
+	border-radius: 10px;
+	display: grid;
+	grid-template-areas:
+	"head head"
+	"main p"
+	"button button";
+	grid-template-rows: auto auto auto;
+	padding: 20px;
+	gap: 20px;
+}
+.pop-up-container img{
+	width: 200px;
+	height: 200px;
+}
+#w12{
+	grid-area: main;
+}
+#p{
+	grid-area: p;
+}
+#head{
+	grid-area: head;
+}
+#btn-2{
+	grid-area: button;
+}
+#contact{
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: auto auto;
+	background: hsla(0, 0%, 0%, 0.966);	
+	grid-template-areas: 
+	"main footer";
+}
+#contact main{
+	grid-area: main;
+	border-right: 1px dotted grey;
+}
+#contact form{
+	display: grid;
+	gap: 10px;
+	max-width: 300px;
+	padding: 20px 10px;
+	border-radius: 10px	;
+	animation: run 1s ease-in-out 0s 1;
+	animation-timeline: view(90% 10%);
+	animation-range:cover ;
+}
+#contact form input{
+	padding: 10px 10px;
+	background: none;
+	border: none;
+	border-bottom: 1px solid white;
+}
+#contact form input::placeholder{
+	color: white;
+}
+#contact button{
+	background: grey;
+	border-radius: 20px;
+}
+#contact form textarea{
+	background: none;
+	border: 1px solid white;
+	color: grey;
+	padding: 20px;
+}
+.info{
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	border-bottom:1px solid grey ;
+	margin: 10px;
+	animation: run 1s ease-in-out 0s 1;
+	animation-timeline: view(90% 10%);
+	animation-range:cover ;
+}
+.info a{
+	color: grey;
+}
+.info .fa-brands{
+	cursor: pointer;
+	font-size: 25px;
+	margin: 10px;
+	color: grey;
+}
+.info .fa-brands:hover{
+	color: white;
+	transition: 0.3s ease;
+}
+#contact footer{
+	grid-area: footer;
+	text-align: center;
+	align-content: center;
+	font-size:20px ;
+	padding:20px 20px ;
+	color: white;
+}
+.copyright{
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	font-size: 15px;
+	font-weight: 700;
+	font-family: 'Courier New', Courier, monospace;
+}
+@media (max-width:1000px){
+	#hero{
+		min-height: 100vh;
+		background:linear-gradient(to top, rgba(0,0,0,0.2)25%,rgba(0,0,0,0.2)25%), url(b.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: scroll;
+	}
+	nav{
+		grid-area: nav;
+		padding: 1em;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+	#close-btn{
+		font-size: 30px;
+		color:white;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		display: block;
+	}
+	#close-btn:hover{
+		color: goldenrod;
+		transition: 0.3s ease;
+	}
+	#btn{
+		display: block;
+		font-size: 40px;
+		padding: 5px;
+		position: absolute;
+		top: 10px;
+		right: 50px;
+	}
+	#btn:hover{
+		background: goldenrod;
+		border-radius: 5px;
+	}
+	nav ul{
+		list-style: none;
+		text-align: center;
+		align-content: center;
+		display:none;
+		gap: 20px;
+		background: rgba(54, 53, 53, 0.514);
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 50%;
+		text-align: center;
+		font-weight: 900;
+		cursor: pointer;
+		z-index: 1;
+		gap: 20px;
+	}
+	nav ul li{
+		color: white;
+		margin: 10px;
+		display: block;
+		padding: 10px;
+	}
+	nav ul li:hover{
+		background: goldenrod;
+		color: black;
+		transition: 0.3s ease;
+	}
+	aside{
+		grid-area: aside;
+		padding: 10px 10px;
+		align-content: center;
+		display: none;
+	}
+	main{
+		align-content: center;
+		z-index: 10;
+	}
+	main #me{
+		display: block;
+		right: 5px;
+		top: 50%;
+		animation: none;
+		width: 300px;
+		z-index: -1;
+	}
+	.project-card-container{
+		display:grid;
+		grid-template-columns: 500px;
+		justify-content: center;
+		gap: 20px;
+	}
+	#pop-up{
+		background: rgba(0, 0, 0, 0.733);
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		text-align: center;
+		align-content: center;
+		padding: 10px;
+	}
+	.pop-up-container{
+		background: rgba(255, 255, 255, 0.808);
+		border-radius: 10px;
+		display: grid;
+		grid-template-areas:
+		"main main"
+		"head head"
+		"p p"
+		"button button";
+		overflow: scroll;
+		grid-template-rows: auto auto;
+		height: 500px;
+		padding: 20px;
+	}
+	#contact{
+		min-height: 100vh;
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"main main"
+		"footer footer";
+	}
+	#contact form{
+		display: grid;
+		gap: 10px;
+		padding: 10px 10px;
+		border-radius: 10px	;
+	}
+	#contact form input{
+		padding: 5px 5px;
+		background: none;
+		border: none;
+		border-bottom: 1px solid black;
+	}
+	#contact main{
+		display: flex;
+		justify-content: center;
+		grid-area: main;
+		border-right:none;
+		align-content: center;
+	}
+	#sendbtn{
+		padding: 0;
+		height: 50px;
+	}
+}

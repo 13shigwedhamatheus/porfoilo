@@ -1,0 +1,108 @@
+<html>
+<head>
+	<link rel="stylesheet" href="index.css" medial="all">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Opacity chack</title>
+</head>
+<body>
+	<div id="hero">
+		<nav>
+			<h3>Port<span>folio</span></h3>
+			<ul>
+				<li title="My Projects"><i class="fa-solid fa-diagram-project"></i> Projects</li>
+				<li title="Contact Me"><i class="fa-solid fa-address-book"></i> Contact</li>
+				<a href="My Resume.pdf" download><li title="Get Resume"><i class="fa-solid fa-file"></i> Resume</li></a>
+				<i class="fa-solid fa-circle-xmark" id="close-btn" title="Close"></i>
+			</ul>
+			<i class="fa-solid fa-bars" id="btn" title="Menu"></i>
+		</nav>
+		<aside>
+			<h1>Skills</h1>
+			<ul>
+				<li>Html & Css</li>
+				<li>php</li>
+				<li>javasrcipt</li>
+				<li>python</li>
+				<li>React</li>
+				<li>sql</li>
+				<li>mongodb</li>
+				<li>git</li>
+				<li>github</li>
+			</ul>
+		</aside>
+		<main>
+			<img src="hero.png" id="me" alt="photo">
+			<h1>Welcome to my Porfolio</h1>
+			<h3>Shigwedha Matheus</h3>
+			<p>Web and Software Developer</p>
+			<a href="https://github.com/Shigwedhamatheus13@gmail.com"><button type="submit" title="GitHub page"><i class="fa-brands fa-square-github" title="GitHub"></i>
+				 Get my Git</button></a>
+			<a href="#contact"><button type="submit" title="Send Email">Send Email</button></a>
+		</main>
+	</div>
+	<div id="about">
+		<main>
+			<h1>About me</h1>
+			<div class="project-card-container">
+				<div class="cards">
+					<img src="about.png" alt="tekulaphoto">
+					<h2>My Workouts</h2>
+					<p>Description of the card as it appers everywhere!</p>
+					<button type="submit" id="pop-btn">Check Out</button>
+				</div>
+				<div id="pop-up">
+					<i class="fa-solid fa-circle-xmark" id="close-pop" title="Close"></i>
+
+					<div class="pop-up-container">
+						<img id="w12" src="hero.png" alt="">
+						<h2 id="head" >Coding Sessions</h2>
+						<p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi omnis nulla maiores laudantium quod, nobis dolorum autem cupiditate pariatur rerum adipisci asperiores dignissimos dolor sequi expedita et tenetur, quos ex!</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi omnis nulla maiores laudantium quod, nobis dolorum autem cupiditate pariatur rerum adipisci asperiores dignissimos dolor sequi expedita et tenetur, quos ex!</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi omnis nulla maiores laudantium quod, nobis dolorum autem cupiditate pariatur rerum adipisci asperiores dignissimos dolor sequi expedita et tenetur, quos ex!</p>
+						<button id="btn2">See Webiste</button>
+					</div>
+				</div>
+				<div class="cards">
+					<img src="hero.png" alt="">
+					<h2>Coding Sessions</h2>
+					<p>Description of the card as it appers everywhere!</p>
+					<button type="submit">Check Out</button>
+				</div>
+				<div class="cards">
+					<img src="reading.png" height="100%" alt="tekulaphoto">
+					<h2>Reading / Novel Sessions</h2>
+					<p>Description of the card as it appers everywhere!</p>
+					<button type="submit">Check Out</button>
+				</div>
+			</div>
+		</main>
+	</div>
+	<div id="contact">
+		<main>
+			<form>
+				<h1>Contact Me </h1>
+				<input type="text" required placeholder="Name">
+				<input type="email" required placeholder="Email">
+				<input type="tel" required placeholder="Tel +264...">
+				<textarea cols="5" rows="5"> Type your Message here </textarea>
+				<button type="submit" title="Send" id="sendbtn"><i class="fa-solid fa-jet-fighter-up"></i> Send Mail</button>
+			</form>
+		</main>
+		<footer>
+			<p>Find me on the following sites:</p>
+			<div class="info">
+				<i class="fa-brands fa-mail" title="Mail"></i>
+				<i class="fa-brands fa-square-whatsapp" title="WhatsApp"></i>
+				<i class="fa-brands fa-square-facebook" title="Faceboook"></i>
+				<i class="fa-brands fa-square-twitter" title="Twitter"></i>
+				<a href="https://github.com/Shigwedhamatheus13"><i class="fa-brands fa-square-github" title="GitHub"></i></a>
+				<a href=""><i class="fa-brands fa-linkedin"></i></a>
+			</div>
+			<div class="copyright">
+				<p>&copyCopyright <p id="date"></p></p>
+			</div>
+		</footer>
+	</div>
+</body>
+		<script src="index.js"></script>
+</html>
