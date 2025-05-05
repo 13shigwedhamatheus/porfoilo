@@ -279,6 +279,7 @@ main #me{
 #contact form input{
 	padding: 10px 10px;
 	background: none;
+	color: white;
 	border: none;
 	border-bottom: 1px solid white;
 }
